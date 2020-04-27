@@ -10,7 +10,6 @@ def get_mac(ip):
     final_packet=broadcast/arp_packet
     answer=scapy.srp(final_packet,timeout=2,verbose=True)[0]
     mac_addr=answer[0][1].hwsrc
-    print(mac_addr)
     return mac_addr
 
 
